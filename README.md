@@ -5,11 +5,10 @@ A **personal-use** web tool for downloading videos and images from popular platf
 
 
 ## Features
-
 - **TikTok Downloader**  
   - Download videos **with** or **without watermark**.
   - Simple copy-paste URL input and one-click download.
-  
+ 
 - **Tab-based Interface**  
   - Switch easily between TikTok, Twitter, and VSCO tabs.
   
@@ -19,16 +18,13 @@ A **personal-use** web tool for downloading videos and images from popular platf
 - **Dark Mode Support**  
 
 ## Usage
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/personal-downloader.git
    cd personal-downloader
 
 ## Preview
-
 ![Preview Screenshot](preview.png)
-
 
 ## Tech Stack
 
@@ -36,6 +32,5 @@ A **personal-use** web tool for downloading videos and images from popular platf
 - **Tailwind CSS** for styling  
 - **JavaScript (Vanilla)** for functionality  
 - External API: [TikWM](https://tikwm.com/) for TikTok downloads
-
 
 ## 📂 Project Structu
