@@ -19,7 +19,9 @@ A **personal-use** web tool for downloading videos and images from popular platf
 
 ## Structure
 ├── index.html # Main application file
+
 ├── about.html # Infographic/about page
+
 └── README.md # Project documentation
 
 ## Usage
