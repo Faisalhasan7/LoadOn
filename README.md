@@ -17,6 +17,11 @@ A **personal-use** web tool for downloading videos and images from popular platf
   
 - **Dark Mode Support**  
 
+## Structure
+├── index.html # Main application file
+├── about.html # Infographic/about page
+└── README.md # Project documentation
+
 ## Usage
 1. Clone the repository:
    ```bash
@@ -32,5 +37,3 @@ A **personal-use** web tool for downloading videos and images from popular platf
 - **Tailwind CSS** for styling  
 - **JavaScript (Vanilla)** for functionality  
 - External API: [TikWM](https://tikwm.com/) for TikTok downloads
-
-## 📂 Project Structu
