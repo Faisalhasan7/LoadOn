@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Post Tester</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input { width: 250px; padding: 10px; margin-right: 10px; }
+        button { padding: 10px 20px; }
+        pre { text-align: left; margin-top: 20px; background: #f4f4f4; padding: 10px; overflow-x: auto; }
+        img { margin-top: 20px; max-width: 90%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Instagram Post Tester (RapidAPI)</h1>
+    <p>Enter Instagram Post Shortcode (e.g., DLUWkieNc0u)</p>
+    <input type="text" id="postCode" placeholder="Post Shortcode" />
+    <button onclick="fetchPost()">Fetch Post</button>
+
+    <pre id="result"></pre>
+    <div id="imageContainer"></div>
+
+    <script>
+        async function fetchPost() {
+            const code = document.getElementById('postCode').value.trim();
+            const resultDiv = document.getElementById('result');
+            const imageContainer = document.getElementById('imageContainer');
+            resultDiv.textContent = "";
+            imageContainer.innerHTML = "";
+
+            if (!code) {
+                alert("Please enter a shortcode");
+                return;
+            }
+
+            resultDiv.textContent = "Fetching data...";
+
+            try {
+                const response = await fetch(`https://instagram-scraper-stable-api.p.rapidapi.com/get_post.php?code=${code}`, {
+                    method: "GET",
+                    headers: {
+                        "x-rapidapi-key": "082402ef60msh1265ce37b3f30edp188739jsna57b9c409c50",
+                        "x-rapidapi-host": "instagram-scraper-stable-api.p.rapidapi.com"
+                    }
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+                const data = await response.json();
+                resultDiv.textContent = JSON.stringify(data, null, 2);
+
+                // Show first image if available
+                if (data.media && data.media.length > 0) {
+                    const media = data.media[0];
+                    const imageUrl = media.image || media.video;
+                    if (imageUrl) {
+                        imageContainer.innerHTML = `<a href="${imageUrl}" target="_blank">
+                            <img src="${imageUrl}" alt="Instagram Media"><br>Click to open/download
+                        </a>`;
+                    }
+                }
+
+            } catch (err) {
+                resultDiv.textContent = "Error: " + err.message;
+            }
+        }
+    </script>
+</body>
+</html>
