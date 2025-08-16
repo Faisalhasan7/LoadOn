@@ -23,12 +23,6 @@
             animation: fadeIn 0.5s ease-out;
         }
 
-        .dark .glass-card {
-            background: rgba(31, 41, 55, 0.4);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
         .spinner {
             border: 4px solid rgba(0, 0, 0, 0.1);
             border-left-color: #4f46e5;
@@ -76,17 +70,17 @@
     </style>
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen p-4">
+<body class="flex items-center justify-center min-h-screen p-4">
 
     <div class="w-full max-w-lg mx-auto">
         <div class="glass-card shadow-2xl p-6 md:p-8">
             <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">LoadOn Downloader</h1>
-                <p class="text-gray-600 dark:text-gray-300 mt-2 text-lg">Your go-to solution for downloading media.</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800">LoadOn Downloader</h1>
+                <p class="text-gray-600 mt-2 text-lg">Your go-to solution for downloading media.</p>
             </div>
 
             <div class="mb-6">
-                <div class="flex border-b-2 border-gray-200 dark:border-gray-700">
+                <div class="flex border-b-2 border-gray-200">
                     <button id="tiktok-tab-btn" class="tab-btn flex-1 py-3 px-4 text-center font-semibold rounded-t-lg focus:outline-none flex items-center justify-center gap-x-2">
                         <svg fill="currentColor" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21,7H20a4,4,0,0,1-4-4H12V14.5a2.5,2.5,0,1,1-4-2V8.18a6.5,6.5,0,1,0,8,6.32V9.92A8,8,0,0,0,20,11h1Z" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
@@ -110,7 +104,7 @@
 
             <div id="tiktok-tab-content" class="tab-content hidden">
                 <div class="space-y-4">
-                    <input type="url" id="tiktokUrl" placeholder="Paste TikTok video URL here..." class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-transparent rounded-lg text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent input-field">
+                    <input type="url" id="tiktokUrl" placeholder="Paste TikTok video URL here..." class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent input-field">
                     <button id="tiktokDownloadBtn" class="w-full bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold py-3 px-4 rounded-lg download-btn flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -127,7 +121,7 @@
 
             <div id="vsco-tab-content" class="tab-content hidden">
                 <div class="space-y-4">
-                    <input type="url" id="vscoUrl" placeholder="Paste VSCO image/video URL here..." class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-transparent rounded-lg text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent input-field">
+                    <input type="url" id="vscoUrl" placeholder="Paste VSCO image/video URL here..." class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent input-field">
                     <button id="vscoDownloadBtn" class="w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold py-3 px-4 rounded-lg download-btn flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -144,7 +138,7 @@
 
             <div id="twitter-tab-content" class="tab-content hidden">
                 <div class="space-y-4">
-                    <input type="url" id="twitterUrl" placeholder="Paste X / Twitter URL here..." class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-transparent rounded-lg text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent input-field">
+                    <input type="url" id="twitterUrl" placeholder="Paste X / Twitter URL here..." class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent input-field">
                     <button id="twitterDownloadBtn" class="w-full bg-gradient-to-r from-gray-800 to-black text-white font-bold py-3 px-4 rounded-lg download-btn flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -161,8 +155,8 @@
 
 
             <div class="text-center mt-8">
-                <p class="text-xs text-gray-500 dark:text-gray-400">Crafted by Faisal Hasan - For educational purposes.</p>
-                <a class="text-xs text-blue-400 dark:text-gray-500 hover:underline" href="./about.html">View Roadmap</a>
+                <p class="text-xs text-gray-500">Crafted by Faisal Hasan - For educational purposes.</p>
+                <a class="text-xs text-blue-400 hover:underline" href="./about.html">View Roadmap</a>
             </div>
         </div>
     </div>
@@ -200,7 +194,7 @@
         };
 
         const baseTabClass = 'tab-btn flex-1 py-3 px-4 text-center font-semibold rounded-t-lg focus:outline-none flex items-center justify-center gap-x-2';
-        const inactiveTabClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700';
+        const inactiveTabClass = 'text-gray-500 hover:bg-gray-200';
 
         // --- Tab Switching Logic ---
         function showTab(tabName) {
